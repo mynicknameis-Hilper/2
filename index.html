@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Задания на JS</title>
+  <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+  <h2>Выберите задание:</h2>
+  <button onclick="openModal('task1Input')">1. Возраст через 5 лет</button>
+  <button onclick="openModal('task2Input')">2. Сложение двух чисел</button>
+  <button onclick="openModal('task3Input')">3. Приветствие</button>
+
+  <div id="task1Input" class="modal">
+    <div class="modal-content">
+      <h3>Задание 1: Возраст</h3>
+      <input type="number" id="ageInput1" placeholder="Введите ваш возраст">
+      <br>
+      <button onclick="runTask1()">Далее</button>
+    </div>
+  </div>
+
+  <div id="task1Result" class="modal">
+    <div class="modal-content">
+      <h3>Результат Задания 1</h3>
+      <p id="task1ResultText"></p>
+      <button onclick="closeModal('task1Result')">ОК</button>
+    </div>
+  </div>
+
+  <div id="task2Input" class="modal">
+    <div class="modal-content">
+      <h3>Задание 2: Сложение</h3>
+      <input type="number" id="num1" placeholder="Первое число"><br>
+      <input type="number" id="num2" placeholder="Второе число"><br>
+      <button onclick="runTask2()">Посчитать</button>
+    </div>
+  </div>
+
+  <div id="task2Result" class="modal">
+    <div class="modal-content">
+      <h3>Результат Задания 2</h3>
+      <p id="task2ResultText"></p>
+      <button onclick="closeModal('task2Result')">ОК</button>
+    </div>
+  </div>
+
+  <div id="task3Input" class="modal">
+    <div class="modal-content">
+      <h3>Задание 3: Анкетные данные</h3>
+      <input type="text" id="nameInput" placeholder="Ваше имя"><br>
+      <input type="number" id="ageInput3" placeholder="Ваш возраст"><br>
+      <button onclick="confirmTask3()">Далее</button>
+    </div>
+  </div>
+
+  <div id="task3Confirm" class="modal">
+    <div class="modal-content">
+      <h3>Проверьте данные</h3>
+      <p id="task3ConfirmText"></p>
+      <div class="button-group">
+        <button onclick="backToInput3()" class="btn-secondary">Назад</button>
+        <button onclick="finishTask3()">Да, всё верно</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="task3Result" class="modal">
+    <div class="modal-content">
+      <h3>Результат Задания 3</h3>
+      <p id="task3ResultText"></p>
+      <button onclick="closeModal('task3Result')">ОК</button>
+    </div>
+  </div>
+
+  <script src="pr.js"></script>
+</body>
+</html>
